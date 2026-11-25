@@ -1,0 +1,561 @@
+{
+  "source": "sample_mcqs_16_30.docx",
+  "document_errors": [],
+  "questions": [
+    {
+      "mcq_no": 16,
+      "written_number": "16",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A blog needs good SEO and fast first content, but its admin dashboard sits behind login and is highly interactive. Which approach fits best?",
+        "question_html": "A blog needs good SEO and fast first content, but its admin dashboard sits behind login and is highly interactive. Which approach fits best?",
+        "options": [
+          {
+            "label": "A",
+            "text": "SSR for public pages, CSR for the dashboard"
+          },
+          {
+            "label": "B",
+            "text": "CSR everywhere, plus a sitemap for crawlers"
+          },
+          {
+            "label": "C",
+            "text": "SSR everywhere, with no client JavaScript"
+          },
+          {
+            "label": "D",
+            "text": "CSR for public pages, SSR for the dashboard"
+          }
+        ],
+        "correct_answer": "A",
+        "explanation": "Public pages need SEO and a fast first paint, which SSR gives. The dashboard is behind login, so it needs no SEO, and its heavy interactivity suits CSR.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Evaluate",
+        "topic": "Rendering: SSR vs CSR",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 16
+      },
+      "fingerprint": "ab470d921302d08bf87b4d694dceb4836f6f1d186ba61aebdc719816ee30013e"
+    },
+    {
+      "mcq_no": 17,
+      "written_number": "17",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "User 7 is stored with name, email and phone. A client sends PUT /users/7 with body {\"name\": \"Asha\"}. Under strict PUT semantics, what is stored afterwards?",
+        "question_html": "User 7 is stored with name, email and phone. A client sends <code>PUT /users/7</code> with body <code>{\"name\": \"Asha\"}</code>. Under strict PUT semantics, what is stored afterwards?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Name updated; email and phone unchanged"
+          },
+          {
+            "label": "B",
+            "text": "A new user 8 created with name Asha"
+          },
+          {
+            "label": "C",
+            "text": "Only name remains; email and phone gone"
+          },
+          {
+            "label": "D",
+            "text": "Rejected, since PUT needs the id in body"
+          }
+        ],
+        "correct_answer": "C",
+        "explanation": "PUT replaces the whole resource with the body sent, so fields left out are removed. A partial update is what PATCH is for.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Apply",
+        "topic": "HTTP Methods",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 17
+      },
+      "fingerprint": "782263868597088543960b073258af76b8743776c7ba3a9cc0078f1bea4fc8c8"
+    },
+    {
+      "mcq_no": 18,
+      "written_number": "18",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "Which pair of methods is idempotent but not safe?",
+        "question_html": "Which pair of methods is idempotent but not safe?",
+        "options": [
+          {
+            "label": "A",
+            "text": "GET and HEAD"
+          },
+          {
+            "label": "B",
+            "text": "PUT and DELETE"
+          },
+          {
+            "label": "C",
+            "text": "POST and PATCH"
+          },
+          {
+            "label": "D",
+            "text": "GET and DELETE"
+          }
+        ],
+        "correct_answer": "B",
+        "explanation": "Repeating PUT or DELETE leaves the server in the same state, so both are idempotent. Both change data, so neither is safe. GET and HEAD are safe and idempotent.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Understand",
+        "topic": "HTTP Methods",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 18
+      },
+      "fingerprint": "982203325caa33ddd127de3a0db2485a0ea24a5ad5fe31e0a6c589cf0b319107"
+    },
+    {
+      "mcq_no": 19,
+      "written_number": "19",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A logged-in regular user calls DELETE /admin/users/5. The token is valid, but the user has no admin rights. Which status code fits?",
+        "question_html": "A logged-in regular user calls <code>DELETE /admin/users/5</code>. The token is valid, but the user has no admin rights. Which status code fits?",
+        "options": [
+          {
+            "label": "A",
+            "text": "401 Unauthorized"
+          },
+          {
+            "label": "B",
+            "text": "400 Bad Request"
+          },
+          {
+            "label": "C",
+            "text": "404 Not Found"
+          },
+          {
+            "label": "D",
+            "text": "403 Forbidden"
+          }
+        ],
+        "correct_answer": "D",
+        "explanation": "The user is authenticated, since the token is valid, but lacks permission, so 403. 401 would mean the user is not logged in.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Apply",
+        "topic": "HTTP Status Codes",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 19
+      },
+      "fingerprint": "b46bf510011bb7bd9f997d39d18584b6c33e8ac4bbc24f6677f5cbe0617ad857"
+    },
+    {
+      "mcq_no": 20,
+      "written_number": "20",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A client sends a JSON body with Content-Type: text/plain to an endpoint that only accepts application/json. Which status code fits?",
+        "question_html": "A client sends a JSON body with <code>Content-Type: text/plain</code> to an endpoint that only accepts <code>application/json</code>. Which status code fits?",
+        "options": [
+          {
+            "label": "A",
+            "text": "406 Not Acceptable"
+          },
+          {
+            "label": "B",
+            "text": "400 Bad Request"
+          },
+          {
+            "label": "C",
+            "text": "415 Unsupported Media Type"
+          },
+          {
+            "label": "D",
+            "text": "422 Unprocessable Content"
+          }
+        ],
+        "correct_answer": "C",
+        "explanation": "415 means the server can't accept the request body's Content-Type. 406 is about the Accept header, the format the client wants back.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Apply",
+        "topic": "HTTP Status Codes",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 20
+      },
+      "fingerprint": "857879b0e5827ae70e999ce2f2d5cb81ecdba3d9912ba7834d37fc16e3c6f616"
+    },
+    {
+      "mcq_no": 21,
+      "written_number": "21",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A server sends Set-Cookie: sid=abc; Max-Age=3600; HttpOnly; Secure; SameSite=Lax. Which statement is true?",
+        "question_html": "A server sends <code>Set-Cookie: sid=abc; Max-Age=3600; HttpOnly; Secure; SameSite=Lax</code>. Which statement is true?",
+        "options": [
+          {
+            "label": "A",
+            "text": "The browser sends it only over HTTPS"
+          },
+          {
+            "label": "B",
+            "text": "It is deleted when the tab is closed"
+          },
+          {
+            "label": "C",
+            "text": "Page scripts can read it from document.cookie"
+          },
+          {
+            "label": "D",
+            "text": "It is sent on every cross-site POST request"
+          }
+        ],
+        "correct_answer": "A",
+        "explanation": "Secure means the cookie travels only over HTTPS. HttpOnly blocks scripts, SameSite=Lax blocks cross-site POSTs, and Max-Age keeps it for an hour even after the tab closes.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Analyze",
+        "topic": "Cookies and Sessions",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 21
+      },
+      "fingerprint": "f0b32c5880c4873bb8157b973a5bc1cbd70f269abc820c691b7da7bbc125c10c"
+    },
+    {
+      "mcq_no": 22,
+      "written_number": "22",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "old-shop.com has moved for good to new-shop.com. Which response keeps the search ranking?",
+        "question_html": "old-shop.com has moved for good to new-shop.com. Which response keeps the search ranking?",
+        "options": [
+          {
+            "label": "A",
+            "text": "302 with a Location header"
+          },
+          {
+            "label": "B",
+            "text": "200 with a meta refresh tag"
+          },
+          {
+            "label": "C",
+            "text": "307 with a Location header"
+          },
+          {
+            "label": "D",
+            "text": "301 with a Location header"
+          }
+        ],
+        "correct_answer": "D",
+        "explanation": "301 is a permanent redirect, so search engines move the ranking to the new URL. 302 and 307 are temporary redirects.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Apply",
+        "topic": "HTTP Status Codes",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 22
+      },
+      "fingerprint": "2e0c336808fc237d6ed97bf4491c55bc0b074c882a38e11e6b07923d9f7c437c"
+    },
+    {
+      "mcq_no": 23,
+      "written_number": "23",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "For a first visit to https://api.app.com/orders, which order of steps is correct?",
+        "question_html": "For a first visit to https://api.app.com/orders, which order of steps is correct?",
+        "options": [
+          {
+            "label": "A",
+            "text": "TCP connection → DNS lookup → TLS handshake → HTTP request"
+          },
+          {
+            "label": "B",
+            "text": "DNS lookup → TCP connection → TLS handshake → HTTP request"
+          },
+          {
+            "label": "C",
+            "text": "DNS lookup → TLS handshake → TCP connection → HTTP request"
+          },
+          {
+            "label": "D",
+            "text": "TLS handshake → DNS lookup → TCP connection → HTTP request"
+          }
+        ],
+        "correct_answer": "B",
+        "explanation": "DNS first finds the IP, then a TCP connection opens, then TLS is set up on top of it. Only then is the HTTP request sent.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Understand",
+        "topic": "How a Web Request Works",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 23
+      },
+      "fingerprint": "a97d4b0a327f16b56841b969764a3b7dd09a840f6879baba315b4f6603b9bf1b"
+    },
+    {
+      "mcq_no": 24,
+      "written_number": "24",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "Nginx forwards a request to a Node server that has crashed, and the connection is refused. What does the client most likely get from Nginx?",
+        "question_html": "Nginx forwards a request to a Node server that has crashed, and the connection is refused. What does the client most likely get from Nginx?",
+        "options": [
+          {
+            "label": "A",
+            "text": "500 Internal Server Error"
+          },
+          {
+            "label": "B",
+            "text": "504 Gateway Timeout"
+          },
+          {
+            "label": "C",
+            "text": "502 Bad Gateway"
+          },
+          {
+            "label": "D",
+            "text": "503 Service Unavailable"
+          }
+        ],
+        "correct_answer": "C",
+        "explanation": "502 means the gateway got no valid response from the upstream server. 504 is for an upstream that is too slow to answer.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Apply",
+        "topic": "HTTP Status Codes",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 24
+      },
+      "fingerprint": "50f11cf57f75e98129bd42e74a23d449dc5e20e1d95a5a1fb118c2a8b80b4ee9"
+    },
+    {
+      "mcq_no": 25,
+      "written_number": "25",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "Why are in-memory server sessions harder to run on two servers than stateless requests?",
+        "question_html": "Why are in-memory server sessions harder to run on two servers than stateless requests?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Session data sits in one server's memory"
+          },
+          {
+            "label": "B",
+            "text": "Cookies are bound to a single server IP"
+          },
+          {
+            "label": "C",
+            "text": "TLS certificates work on one server only"
+          },
+          {
+            "label": "D",
+            "text": "Browsers keep just one cookie per site"
+          }
+        ],
+        "correct_answer": "A",
+        "explanation": "The session exists only on the server that created it, so a request routed to the other server finds no session. A shared store such as Redis fixes this.",
+        "difficulty": "Medium",
+        "bloom_taxonomy": "Analyze",
+        "topic": "Cookies and Sessions",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 25
+      },
+      "fingerprint": "d4e5f5f18e87330b0f35aa33ea7f1834ff9c0a1f3748197cc3c3a1476d6325a7"
+    },
+    {
+      "mcq_no": 26,
+      "written_number": "26",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A response sends Set-Cookie: token=xyz; SameSite=None with no Secure attribute. What does a modern Chrome browser do?",
+        "question_html": "A response sends <code>Set-Cookie: token=xyz; SameSite=None</code> with no Secure attribute. What does a modern Chrome browser do?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Stores it and sends it cross-site as asked"
+          },
+          {
+            "label": "B",
+            "text": "Stores it but treats it as SameSite=Strict"
+          },
+          {
+            "label": "C",
+            "text": "Stores it only until the browser closes"
+          },
+          {
+            "label": "D",
+            "text": "Rejects it, since None requires Secure"
+          }
+        ],
+        "correct_answer": "D",
+        "explanation": "Browsers reject any cookie with SameSite=None unless Secure is also set, so this cookie is never stored.",
+        "difficulty": "Hard",
+        "bloom_taxonomy": "Apply",
+        "topic": "Cookies and Sessions",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 26
+      },
+      "fingerprint": "eda5b085dfa92a0d3176fd36fadefc089e26ce255ec51f65914850c92017c838"
+    },
+    {
+      "mcq_no": 27,
+      "written_number": "27",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "In an SSR app that uses hydration, what is true after the HTML arrives but before the JavaScript bundle has run?",
+        "question_html": "In an SSR app that uses hydration, what is true after the HTML arrives but before the JavaScript bundle has run?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Content shows, but buttons may not respond"
+          },
+          {
+            "label": "B",
+            "text": "Nothing shows until the bundle has run"
+          },
+          {
+            "label": "C",
+            "text": "Content and click handlers both fully work"
+          },
+          {
+            "label": "D",
+            "text": "The server patches the DOM over a socket"
+          }
+        ],
+        "correct_answer": "A",
+        "explanation": "The server-rendered HTML is visible as soon as it arrives. Event handlers attach only after the bundle loads and hydrates the page.",
+        "difficulty": "Hard",
+        "bloom_taxonomy": "Understand",
+        "topic": "Rendering: SSR vs CSR",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 27
+      },
+      "fingerprint": "e8101cc8bca978c7491ee033d906451c270f02a8d6b550d84bfefda5dfb67675"
+    },
+    {
+      "mcq_no": 28,
+      "written_number": "28",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A client sends PATCH /accounts/9 with {\"balanceIncrement\": 100}. The request times out, the client retries, and it turns out the first request had succeeded. What is the result?",
+        "question_html": "A client sends <code>PATCH /accounts/9</code> with <code>{\"balanceIncrement\": 100}</code>. The request times out, the client retries, and it turns out the first request had succeeded. What is the result?",
+        "options": [
+          {
+            "label": "A",
+            "text": "Balance rises by 100, since PATCH is idempotent"
+          },
+          {
+            "label": "B",
+            "text": "Balance rises by 200, since this PATCH isn't idempotent"
+          },
+          {
+            "label": "C",
+            "text": "The retry is rejected with 409 automatically"
+          },
+          {
+            "label": "D",
+            "text": "Balance rises by 100, since HTTP drops duplicates"
+          }
+        ],
+        "correct_answer": "B",
+        "explanation": "Applying an increment twice gives a different result, so this PATCH is not idempotent and the retry adds another 100. Idempotency keys prevent this.",
+        "difficulty": "Hard",
+        "bloom_taxonomy": "Analyze",
+        "topic": "HTTP Methods",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 28
+      },
+      "fingerprint": "a049e211191c9f19a7e36b3cc9d09d60012efd515245c9315939d5a788396b8e"
+    },
+    {
+      "mcq_no": 29,
+      "written_number": "29",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "A backend engineer designs an endpoint GET [https://api.bank.com/transfer?token=xyz123&amt=500](https://api.bank.com/transfer?token=xyz123&amt=500). Even though HTTPS is enabled, why is passing token=xyz123 in the query string considered a security flaw?",
+        "question_html": "A backend engineer designs an endpoint GET [https://api.bank.com/transfer?token=xyz123&amp;amt=500](https://api.bank.com/transfer?token=xyz123&amp;amt=500). Even though HTTPS is enabled, why is passing token=xyz123 in the query string considered a security flaw?",
+        "options": [
+          {
+            "label": "A",
+            "text": "HTTPS encrypts the request body, but query parameters travel in plaintext over the network"
+          },
+          {
+            "label": "B",
+            "text": "Reverse proxies, load balancers, and browser histories routinely log full URLs including query strings"
+          },
+          {
+            "label": "C",
+            "text": "TLS certificates do not validate query parameters"
+          },
+          {
+            "label": "D",
+            "text": "Query parameters are cached publicly by default on all CDNs"
+          }
+        ],
+        "correct_answer": "B",
+        "explanation": "While HTTPS encrypts the full URL over the network, the server/API gateway decrypts it and standard access logs (Nginx, AWS ALB, CloudWatch) record the request line (path + query) in plaintext, risking credential leaks.",
+        "difficulty": "Hard",
+        "bloom_taxonomy": "Analyze",
+        "topic": "How a Web Request Works",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 29
+      },
+      "fingerprint": "96f31dc6b65e196e31905da618d9d5508351afa45ed180b27b00860c615e9519"
+    },
+    {
+      "mcq_no": 30,
+      "written_number": "30",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "question": {
+        "question_text": "api.shop.com sets a cookie with Domain=shop.com; Path=/account. Which request will the browser send it with?",
+        "question_html": "api.shop.com sets a cookie with <code>Domain=shop.com; Path=/account</code>. Which request will the browser send it with?",
+        "options": [
+          {
+            "label": "A",
+            "text": "https://shop.com/cart"
+          },
+          {
+            "label": "B",
+            "text": "https://shop.com/accounts"
+          },
+          {
+            "label": "C",
+            "text": "https://www.shop.com/account/orders"
+          },
+          {
+            "label": "D",
+            "text": "https://myshop.com/account"
+          }
+        ],
+        "correct_answer": "C",
+        "explanation": "Domain=shop.com covers shop.com and all its subdomains. Path=/account matches /account and /account/... but not /accounts, and myshop.com is a different domain.",
+        "difficulty": "Hard",
+        "bloom_taxonomy": "Apply",
+        "topic": "Cookies and Sessions",
+        "source_ref": "sample_mcqs_16_30.docx",
+        "question_no": 30
+      },
+      "fingerprint": "516e326796f821c5be068c2fc21b30d0acd66d8af267007ac009489aff0a471a"
+    }
+  ]
+}

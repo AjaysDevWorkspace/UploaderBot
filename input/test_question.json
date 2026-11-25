@@ -1,0 +1,27 @@
+{
+  "question_text": "[BOT TEST] In a normal HTTP exchange, who starts the communication?",
+  "options": [
+    {
+      "label": "A",
+      "text": "The server, by pushing data to the client"
+    },
+    {
+      "label": "B",
+      "text": "The client, by sending a request first"
+    },
+    {
+      "label": "C",
+      "text": "The database, by firing a change event"
+    },
+    {
+      "label": "D",
+      "text": "The load balancer, by polling clients"
+    }
+  ],
+  "correct_answer": "B",
+  "explanation": "HTTP is request-driven. The client always sends a request first, and the server only responds to it.",
+  "difficulty": "Easy",
+  "bloom_taxonomy": "Understand",
+  "source_ref": "test_question.json",
+  "question_no": 1
+}

@@ -1,0 +1,17 @@
+{
+  "admin_url": "https://django.newtonschool.co/admin/",
+  "mcq_add_url": null,
+  "browser_profile_dir": ".browser_profile",
+  "headless": false,
+  "slow_mo_ms": 150,
+  "question_type": "Multiple Choice Question",
+  "assessment_types": [
+    "Normal Assessment",
+    "Competitive Assessment"
+  ],
+  "default_difficulty": null,
+  "default_bloom_taxonomy": null,
+  "shuffle_options": true,
+  "min_options": 4,
+  "delay_between_questions_s": 1.0
+}
